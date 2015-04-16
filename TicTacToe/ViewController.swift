@@ -71,8 +71,8 @@ class GameViewController: UIViewController, TicTacToeProtocol {
         
         if (IsWinningLinePresent()) {
             // pop up a winning message
-            var refreshAlert = UIAlertController(title: "Game Over", message: (turn == .X ? "X" : "O") + " wins!", preferredStyle: UIAlertControllerStyle.Alert)
-            presentViewController(refreshAlert, animated: true, completion: nil)
+            var winAlert = UIAlertController(title: "Game Over", message: (turn == .X ? "X" : "O") + " wins!", preferredStyle: UIAlertControllerStyle.Alert);
+            presentViewController(winAlert, animated: true, completion: nil);
         }
         
         // alternate turns
